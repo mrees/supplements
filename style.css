@@ -287,6 +287,165 @@ a:hover { color: var(--link-hover); }
 
 .evidence-dots span.filled { background: var(--accent); }
 
+/* ── Search UI ───────────────────────────────────── */
+.search-section {
+  margin: 1.8rem 0 2rem;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color 0.2s;
+}
+
+.search-wrapper:focus-within {
+  border-color: var(--accent);
+}
+
+#wiki-search {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-ui);
+  color: var(--text);
+  background: transparent;
+}
+
+#wiki-search::placeholder {
+  color: var(--muted);
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  padding: 0.75rem 0.8rem;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1.1rem;
+  display: none;
+}
+
+.search-clear:hover { color: var(--text); }
+
+#search-results {
+  margin-top: 1rem;
+}
+
+.search-hit {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.6rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.search-hit:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent-hover);
+}
+
+.search-hit-title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent-hover);
+}
+
+.search-hit-snippet {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+.search-hit-snippet mark {
+  background: #ffe08a;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.search-count {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.no-results {
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  color: var(--muted);
+  padding: 0.5rem 0;
+}
+
+/* ── References section ──────────────────────────── */
+.references {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border);
+}
+
+.references h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.ref-list {
+  list-style: none;
+  margin-left: 0;
+  counter-reset: ref-counter;
+}
+
+.ref-list li {
+  counter-increment: ref-counter;
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.88rem;
+  font-family: var(--font-ui);
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.ref-list li::before {
+  content: counter(ref-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.82rem;
+  min-width: 1.6rem;
+}
+
+.ref-list li a {
+  color: var(--link);
+  word-break: break-all;
+}
+
+.ref-finding {
+  display: block;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.15rem;
+  font-size: 0.83rem;
+}
+
 /* ── Footer ──────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--border);
