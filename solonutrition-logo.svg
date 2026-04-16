@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 90">
+  <!-- Single word "SoloNutrition" — Solo in terracotta, Nutrition in sage -->
+  <!-- Rendered as one text element using tspan for colour switching, no spacing between parts -->
+  <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-1" y="70">
+    <tspan x="20" fill="#C0714A">Solo</tspan><tspan fill="#7A9E7E">Nutrition</tspan>
+  </text>
+</svg>

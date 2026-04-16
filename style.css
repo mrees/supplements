@@ -5,13 +5,13 @@
   --border: #e0ddd6;
   --text: #1a1a1a;
   --muted: #5a5a5a;
-  --accent: #2d6a4f;
-  --accent-light: #d8f3dc;
-  --accent-hover: #1b4332;
-  --link: #2d6a4f;
-  --link-hover: #1b4332;
-  --tag-bg: #eaf4ee;
-  --tag-text: #1b4332;
+  --accent: #7A9E7E;
+  --accent-light: #e8f2e9;
+  --accent-hover: #4f7a54;
+  --link: #4f7a54;
+  --link-hover: #3a5e3e;
+  --tag-bg: #e8f2e9;
+  --tag-text: #3a5e3e;
   --warn: #7d4e00;
   --warn-bg: #fff8e1;
   --radius: 8px;
@@ -31,11 +31,34 @@ body {
   min-height: 100vh;
 }
 
-/* ── Layout ─────────────────────────────────────── */
+/* ── Logo colours ────────────────────────────────── */
+:root {
+  --terracotta: #C0714A;
+  --sage: #7A9E7E;
+}
+
+/* ── Full-width banner (index page only) ─────────── */
+.brand-banner {
+  width: 100%;
+  background: #faf8f5;
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 2rem 1.4rem;
+}
+
+.brand-banner .brand-logo-img {
+  width: min(680px, 90vw);
+  height: auto;
+  display: block;
+}
+
+/* ── Compact logo in site-header (all pages) ─────── */
 .site-header {
   background: var(--accent);
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -43,16 +66,22 @@ body {
 }
 
 .site-header .logo {
-  font-family: var(--font-ui);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #fff;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  white-space: nowrap;
 }
 
-.site-header .logo span { opacity: 0.75; font-weight: 400; }
+.site-header .logo .logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  /* white background pill so SVG colours show on green header */
+  background: #fff;
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+
+.site-header .logo span { display: none; }
 
 .header-search {
   flex: 1;
@@ -455,6 +484,21 @@ a:hover { color: var(--link-hover); }
   color: var(--muted);
   padding: 2rem 1rem;
   margin-top: 3rem;
+}
+
+.footer-contact {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--sage);
+}
+
+.footer-contact a {
+  color: var(--sage);
+  text-decoration: underline;
+}
+
+.footer-contact a:hover {
+  color: var(--accent-hover);
 }
 
 /* ── Index grid ──────────────────────────────────── */
